@@ -1,0 +1,38 @@
+#carousel-icons {
+  background: #439122;
+}
+
+/* ----------- Carousel icons styles ---------- */
+#carousel-icons{
+  background-color: #439122;
+  padding: 36px 0px 15px 0;
+}
+#carousel-icons .item img{
+  width: 60px;
+  height: auto;
+  margin: auto;
+}
+#carousel-icons .item{
+/*     height: 200px;
+*/    
+  display: flex;
+  justify-content: center;
+/*     align-items: center;
+*/
+}
+#carousel-icons .item p{
+  color: #ffffff;
+}
+#carousel-icons .wrap-image{
+  height: 80px;
+  padding: 0 0 20px;
+}
+#carousel-icons .wrap-image img{
+  width: 60px;
+  height:auto;
+}
+
+#carousel-icons p {
+  text-align: center;
+}
+/* ----------- Carousel icons styles --------- */

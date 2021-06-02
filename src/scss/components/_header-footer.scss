@@ -1,0 +1,64 @@
+// header styles
+
+.sae-header {
+  background: $color-primary;
+  height: 90px;
+  * {
+    color: $color-black;
+  }
+  img.logo {
+    width: 180px;
+    height: auto;
+  }
+}
+
+ul li.menu-item {
+  &.current-menu-item {
+    a.nav-link {
+      color: $color-white;
+      opacity: 1;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Footer styles
+
+.sae-footer {
+  background: $color-primary;
+  padding: 30px 0;
+  * {
+    color: $color-black;
+  }
+  img.logo {
+    width: 150px;
+    height: auto;
+  }
+}
+
+// Social nav
+.social-nav-container {
+  ul.social-nav {
+    li.menu-item {
+      position: relative;
+      padding: 10px;
+      text-align: center;
+      &:before {
+        text-align: center;
+        font-size: 25px;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        opacity: 0;
+      }
+    }
+  }
+}

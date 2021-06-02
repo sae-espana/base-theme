@@ -1,0 +1,70 @@
+// =============================================================================
+// #BEM syntaxis
+// =============================================================================
+
+/// Add BEM syntaxis to a subelement
+///
+/// @param {string} $name - Name of the subelement
+///
+@mixin element($name) {
+  @at-root #{&}__#{$name} {
+    @content;
+  }
+}
+
+/// Add BEM syntaxis to an modifier
+///
+/// @param {string} $name - Name of the modifier
+///
+@mixin modifier($name) {
+  @at-root #{&}--#{$name} {
+    @content;
+  }
+}
+
+// =============================================================================
+// #Grid Mixins
+// =============================================================================
+
+/// Create a media query
+///
+/// @param {value} $width
+@mixin media($width) {
+  @media only screen and (min-width: #{$width}) {
+    @content;
+  }
+}
+/// Create a media query
+///
+/// @param {value} $width
+@mixin mediaMobile($width) {
+  @media only screen and (max-width: #{$width}) {
+    @content;
+  }
+}
+
+/// @param {value} $width
+///  @param {string} $color
+@mixin border($width, $color) {
+  border: #{$width} solid #{$color};
+}
+
+
+//
+@mixin padding-y() {
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media($media-phone-landscape) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include media($media-tablet-portrait) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  @include media($media-tablet-landscape) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+

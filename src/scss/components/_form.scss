@@ -1,0 +1,60 @@
+// form styles
+
+.gform_wrapper .gform_body .gform_fields.top_label,
+.gform_wrapper .gform_footer.top_label  {
+  label,
+  label.gfield_label {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0 !important;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=number] {
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    border-radius: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .gform_button.button,
+  input[type=submit],
+  input[type=submit].gform_button.button {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid $color-primary;
+    color: $color-black;
+    padding: 8px 14px;
+    transition: 0.3s;
+    font-family: 'Asap-Bold', monospace;
+    font-size: 14px;
+    outline: none;
+    &:hover {
+      background: $color-primary;
+    }
+  }
+  li.gfield {
+    margin-top: 8px !important;
+    &.gfield_error {
+      border-bottom: 0;
+      border-top: 0;
+      background: transparent;
+      padding-top: 0;
+      .gfield_description.validation_message {
+        padding-top: 3px;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+    .ginput_container {
+      margin-top: 5px !important;
+    }
+  }
+}
+
+.gform_wrapper .validation_error {
+  display: none;
+}
