@@ -4,24 +4,22 @@
 */
 ?>
 
-<nav class="sae-header navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="sae-header navbar navbar-expand-lg fixed-top">
     <div class="container">
          <?php
-          if ( function_exists( 'the_custom_logo' ) ) {
+          if ( the_custom_logo('navbar-brand img-thumbnail ') ) {
             the_custom_logo('navbar-brand img-thumbnail ');
           } else {
-              echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
+              echo '<a href="'. get_bloginfo( 'url' ) .'">';
+              echo '<h1 class="sae-title-theme">'. get_bloginfo( 'title' ) .'</h1>';
+              echo '</a>';
           } 
         ?>
       
-        <button class="navbar-toggler" 
-                type="button" 
-                data-toggle="collapse" 
-                data-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
         <?php 
            wp_nav_menu( array(
@@ -34,4 +32,5 @@
             ) );    
         ?> 
     </div>
+    <div class="sae-filter"></div>
 </nav>

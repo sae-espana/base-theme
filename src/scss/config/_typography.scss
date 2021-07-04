@@ -1,26 +1,15 @@
 // Typography Styles
 
-@font-face {
-  font-family: 'Asap-Bold';
-  src: url('../../src/fonts/Asap-Bold.ttf')format('truetype');
-}
-@font-face {
-  font-family: 'Asap-SemiBold';
-  src: url('../../src/fonts/Asap-SemiBold.ttf')format('truetype');
-}
-@font-face {
-  font-family: 'Asap-Medium';
-  src: url('../../src/fonts/Asap-Medium.ttf')format('truetype');
-}
-@font-face {
-  font-family: 'Asap-Regular';
-  src: url('../../src/fonts/Asap-Regular.ttf')format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto+Mono:wght@300;400&display=swap');
+
+$fontPrimary: 'Montserrat', sans-serif;
+$fontSecondary: 'Roboto Mono', monospace;
+
 h1, h2, h3, h4, h5, h6, button{
-  font-family: 'Asap-Bold', Arial, Helvetica, sans-serif;
+  font-family: $fontPrimary;
 }
 p, a, ul, li, table, td {
-  font-family: 'Asap-Medium', Arial, Helvetica, sans-serif;
+  font-family: $fontSecondary;
   line-height: 1.8;
 }
 
@@ -30,6 +19,7 @@ body {
 
 h1 {
   font-size: 32px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -60,4 +50,15 @@ p {
 }
 .capitalize {
   text-transform: capitalize;
+}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+  
+  &:hover {
+    color: rgba($color-black, 0.8);
+    text-decoration: none;
+
+  }
 }

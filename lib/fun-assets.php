@@ -1,8 +1,6 @@
 <?php
 // Smart include jquery
 
- 
-  
   if (!is_admin()) {
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.5.0.min.js', false, '3.5.0');
@@ -23,7 +21,7 @@ function scripts_styles_mix() {
         
 
     // Main styles
-    wp_enqueue_script('sae_js', $url . '/src/js/index.js', [], true );
+    wp_enqueue_script('sae_js', $url . '/dist/js/index.js', [], true );
     wp_enqueue_style('sae_css', $url . '/dist/css/index.css', false );
     
     // ajax

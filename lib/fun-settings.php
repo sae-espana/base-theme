@@ -7,7 +7,7 @@ if (function_exists('automatic_feed_links')) {
 	return;
 }
 
-// // disable all widget areas
+// disable all widget areas
 // function disable_all_widgets($sidebars_widgets) {
 // 	//if (is_home())
 // 		$sidebars_widgets = array(false);
@@ -56,26 +56,34 @@ if (function_exists('automatic_feed_links')) {
 	return;
 }
 
+// Custom excert length
+function custom_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
-function translate_field_validation_text( $validation_result ) {
-	$form = $validation_result['form'];
-	$fields = $form['fields'];
 
-	// set the form validation to false
-	foreach( $fields as $k => $field ) {
-		if($field->failed_validation == '1') {
-			$validation_result['is_valid'] = false;
-			$field->failed_validation = true;
-			$field->validation_message = 'Este campo es requerido.';
-		} else {
-			$field->failed_validation = false;
-		}
-	}
-	//Assign modified $form object back to the validation result
-	$validation_result['form'] = $form;
-	return $validation_result;
+// function translate_field_validation_text( $validation_result ) {
+// 	$form = $validation_result['form'];
+// 	$fields = $form['fields'];
+
+// 	// set the form validation to false
+// 	foreach( $fields as $k => $field ) {
+// 		if($field->failed_validation == '1') {
+// 			$validation_result['is_valid'] = false;
+// 			$field->failed_validation = true;
+// 			$field->validation_message = 'Este campo es requerido.';
+// 		} else {
+// 			$field->failed_validation = false;
+// 		}
+// 	}
+// 	//Assign modified $form object back to the validation result
+// 	$validation_result['form'] = $form;
+// 	return $validation_result;
 
 	
-}
-add_filter( 'gform_validation', 'translate_field_validation_text' );
+// }
+// add_filter( 'gform_validation', 'translate_field_validation_text' );
+
+
